@@ -253,11 +253,11 @@ $(document).ready(function () {
 
 <style type="text/css">
 
-#section-TOC {
+#TOC {
   margin: 25px 0px 20px 0px;
 }
 @media (max-width: 768px) {
-#section-TOC {
+#TOC {
   position: relative;
   width: 100%;
 }
@@ -310,6 +310,12 @@ div.tocify {
   border-radius: 0px;
 }
 
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
 
 </style>
 
@@ -326,7 +332,7 @@ div.tocify {
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row-fluid">
 <div class="col-xs-12 col-sm-4 col-md-3">
-<div id="section-TOC" class="tocify">
+<div id="TOC" class="tocify">
 </div>
 </div>
 
@@ -343,7 +349,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">My Website</a>
+      <a class="navbar-brand" href="index.html">CV David Schneider</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -356,6 +362,9 @@ div.tocify {
 <li>
   <a href="arbeit.html">Werkstudententätigkeit</a>
 </li>
+<li>
+  <a href="edv.html">IT-Skills</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -364,7 +373,7 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="section-header">
+<div class="fluid-row" id="header">
 
 
 
@@ -385,16 +394,13 @@ h1.title {
 h1 { /* Header 1 */
   font-size: 28px;
   color: DarkBlue;
-  text-decoration: underline DarkBlue; 
 }
 h2 { /* Header 2 */
     font-size: 22px;
   color: DarkBlue;
 }
 </style>
-<div id="section-werkstudententätigkeit" class="section level1">
-<h1>Werkstudententätigkeit</h1>
-<div id="section-cocus-ag" class="section level2">
+<div id="cocus-ag" class="section level2">
 <h2>02/2020 – 06/2020 COCUS AG</h2>
 <p><strong>COCUS AG, 40549 Düsseldorf</strong></p>
 <p>Übernahme von Projektaufgaben in der Unit Data Science / BI</p>
@@ -416,7 +422,7 @@ h2 { /* Header 2 */
 <li><p>Erstellung von Pre-Sales Pitches</p></li>
 </ul>
 </div>
-<div id="section-auxmoney-gmbh" class="section level2">
+<div id="auxmoney-gmbh" class="section level2">
 <h2>01/2019 – 12/2019 auxmoney GmbH</h2>
 <p><strong>auxmoney GmbH, 40212 Düsseldorf</strong></p>
 <p>Übernahme von Projektaufgaben im Team Business Intelligence:</p>
@@ -440,7 +446,7 @@ h2 { /* Header 2 */
 </ul></li>
 </ul>
 </div>
-<div id="section-bnp-paribas-lease-group-s.a." class="section level2">
+<div id="bnp-paribas-lease-group-s.a." class="section level2">
 <h2>06/2018 – 09/2018 BNP Paribas Lease Group S.A.</h2>
 <p><strong>BNP Paribas Lease Group S.A., 50674 Köln</strong></p>
 <p>Mitarbeit im Team Retail Risk Management &amp; Risk Controlling bei verschiedenen Projekten in der Modellentwicklung und Implementierung:</p>
@@ -451,7 +457,7 @@ h2 { /* Header 2 */
 <li>Backtesting eines Exceltools zur Händlerbewertung</li>
 </ul>
 </div>
-<div id="section-telecommunication-se" class="section level2">
+<div id="telecommunication-se" class="section level2">
 <h2>01/2018 – 05/2018 1&amp;1 Telecommunication SE</h2>
 <p><strong>1&amp;1 Telecommunication SE, 56410 Montabaur</strong></p>
 <p>Unterstützung der Data-Scientists im Bereich Business Performance Management, Team Business &amp; Data Analytics in der täglichen Arbeit:</p>
@@ -463,7 +469,7 @@ h2 { /* Header 2 */
 </ul></li>
 </ul>
 </div>
-<div id="section-fse-portfolio-management-gmbh" class="section level2">
+<div id="fse-portfolio-management-gmbh" class="section level2">
 <h2>04/2017 – 12/2017 FSE Portfolio Management GmbH</h2>
 <p><strong>FSE Portfolio Management GmbH, 50354 Hürth</strong></p>
 <p>Verschiedene Assistenztätigkeiten für Portfoliomanagement und Handel, bspw.:</p>
@@ -484,7 +490,6 @@ h2 { /* Header 2 */
 </ul></li>
 <li><p>Automatisierung von IT-Prozessen, z.B. Kommandozeilenautomatisierung von FTP-Abfragen</p></li>
 </ul>
-</div>
 </div>
 
 
@@ -511,7 +516,7 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function () {
-  window.buildTabsets("section-TOC");
+  window.buildTabsets("TOC");
 });
 
 $(document).ready(function () {
@@ -542,11 +547,11 @@ $(document).ready(function ()  {
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
     };
-    options.showAndHide = true;
+    options.showAndHide = false;
     options.smoothScroll = true;
 
     // tocify
-    var toc = $("#section-TOC").tocify(options).data("toc-tocify");
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
 });
 </script>
 
